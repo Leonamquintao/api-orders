@@ -1,8 +1,7 @@
 const InfoRoute = require('./info')
-// const UsersRoute = require('./users)
-
+const UsersRoute = require('./users')
 
 module.exports = [
   InfoRoute,
-  //UsersRoute
+  UsersRoute
 ]

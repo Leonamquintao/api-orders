@@ -1,7 +1,6 @@
 const router = require('express').Router()
+const getHealthCheck = require('../../controllers/info/getHealthCheck')
 
-router.get('/health-check', (request, response) => {
-  return  response.status(200).send({ status: 200, message: 'api response success! '})
-})
+router.get('/health-check', getHealthCheck)
 
 module.exports = router
