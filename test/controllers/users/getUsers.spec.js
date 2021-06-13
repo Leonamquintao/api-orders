@@ -3,7 +3,7 @@
 const supertest = require('supertest')
 const server = require('../../../src/server')
 
-describe('/user', () => {
+describe('/users', () => {
 
   let request
   
@@ -13,12 +13,6 @@ describe('/user', () => {
   })
 
   it('should return a 200', () => {
-    return request.get('/user').expect(200)
-  })
-
-  it('should resturn an array with 1 object', (done) => {
-    return request.get('/user').end((err, res) => {
-      done()
-    })
+    return request.get('/users').expect(200)
   })
 })

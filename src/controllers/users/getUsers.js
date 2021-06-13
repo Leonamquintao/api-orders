@@ -1,10 +1,10 @@
 'use strict'
 
-function getUser(request, response) {
+function getUsers(request, response) {
   return  response.status(200).send({
     status: 200,
-    data: [{}]
+    data: []
   })
 }
 
-module.exports = getUser
+module.exports = getUsers
