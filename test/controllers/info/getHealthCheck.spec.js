@@ -1,9 +1,10 @@
 'use strict'
 
 const supertest = require('supertest')
+const expect = require('chai').expect
 const server = require('../../../src/server')
 
-describe('/health-check', () => {
+describe('GET /health-check', () => {
 
   let request
   
@@ -12,7 +13,8 @@ describe('/health-check', () => {
     request = supertest.agent(app)
   })
 
-  it('should return a 200', () => {
-    return request.get('/health-check').expect(200)
+  it('should return a 200', async () => {
+    const response = await request.get('/health-check')
+    expect(response.status).to.eql(200)
   })
 })
