@@ -22,3 +22,8 @@ Make fine grained interfaces that are client specific.
 ### Dependency Inversion Principle
 Classes that perform actions must not depends on implementations but must depends of interfaces. Depend on abstractions, not on concretions.
 
+## Model to be developed
+
+![schema](./resources/api-order-schema.png)
+
+
