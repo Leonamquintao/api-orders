@@ -26,4 +26,3 @@ Classes that perform actions must not depends on implementations but must depend
 
 ![schema](./resources/api-order-schema.png)
 
-
