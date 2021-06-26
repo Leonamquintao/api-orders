@@ -23,7 +23,9 @@
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "install": "^0.13.0",
+    "knex": "^0.95.6",
     "npm": "^7.17.0",
+    "pg": "^8.6.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
