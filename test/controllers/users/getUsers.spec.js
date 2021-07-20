@@ -1,25 +1,25 @@
 'use strict'
 
-const supertest = require('supertest')
-const expect = require('chai').expect
-const server = require('../../../src/server')
+const supertest = require('supertest');
+const expect = require('chai').expect;
+const server = require('../../../src/server');
 
 describe('GET /users', () => {
 
-  let request
+  let request;
   
   before(() => {
-    const app = server()
-    request = supertest.agent(app)
+    const app = server();
+    request = supertest.agent(app);
   })
 
   it('should return a 200', async () => {
-    const response = await request.get('/users')
-    expect(response.status).to.eql(200)
+    const response = await request.get('/users');
+    expect(response.status).to.eql(200);
   })
 
   it('should return an array with users limited to 10', async () => {
-    const response = await request.get('/users')
-    expect(response.body.data.length).to.eql(10)
+    const response = await request.get('/users');
+    expect(response.body.data.length).to.eql(10);
   })
 })
