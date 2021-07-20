@@ -26,3 +26,7 @@ Classes that perform actions must not depends on implementations but must depend
 
 ![schema](./resources/api-order-schema.png)
 
+## KnexJs Migration
+
+> knex migrate:make 'name-of-the-migration' --migrations-directory database/migrations
+
