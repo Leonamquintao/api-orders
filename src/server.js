@@ -1,6 +1,7 @@
 'use strict'
 
 const express = require('express');
+require('express-async-errors');
 const compression = require('compression');
 const routes = require('./routes');
 
@@ -15,6 +16,15 @@ function server () {
   }));
 
   app.use('/', ...routes);
+
+  app.use(( error, request, response, next ) => {
+    response.status(412);
+    response.json({
+      status: 'Error',
+      error: error.message
+    });
+    next(error);
+  });
 
   return app;
 }
