@@ -7,7 +7,9 @@
     "start": "nodemon app.js",
     "test": "mocha --recursive",
     "test-watch": "mocha --recursive -w",
-    "test-coverage": "nyc npm test"
+    "test-coverage": "nyc npm test",
+    "migrate": " knex migrate:latest all --knexfile database/knexfile.js",
+    "db-rollback": " knex migrate:rollback all --knexfile database/knexfile.js"
   },
   "keywords": [
     "api",
