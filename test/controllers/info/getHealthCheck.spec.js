@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const supertest = require('supertest');
 const expect = require('chai').expect;
@@ -11,10 +11,10 @@ describe('GET /health-check', () => {
   before(() => {
     const app = server();
     request = supertest.agent(app);
-  })
+  });
 
   it('should return a 200', async () => {
     const response = await request.get('/health-check');
     expect(response.status).to.eql(200);
-  })
+  });
 })

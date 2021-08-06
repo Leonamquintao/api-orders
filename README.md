@@ -1,6 +1,5 @@
 # Api for the study of automated tests, test coverage
 
-
 ## S.O.L.I.D.
 
 ### Single responsability principle
@@ -26,7 +25,9 @@ Classes that perform actions must not depends on implementations but must depend
 
 ![schema](./resources/api-order-schema.png)
 
-## KnexJs Migration
+## KnexJs Migration/Seeds
 
 > knex migrate:make 'name-of-the-migration' --migrations-directory database/migrations
+
+> knex seed:make 'seed-name' database/seeds
 
