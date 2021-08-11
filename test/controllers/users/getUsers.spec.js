@@ -11,10 +11,6 @@ describe('GET /users', () => {
     request = supertest.agent(app);
   });
 
-  after((done) => {
-    done();
-  });
-
   it('should return a 200', async () => {
     const response = await request.get('/users');
     expect(response.status).to.eql(200);
