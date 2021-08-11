@@ -47,5 +47,4 @@ describe('GET /users/:id', () => {
     expect(data).to.have.property('created_at')
       .to.be.a.a('string');
   });
-
 })

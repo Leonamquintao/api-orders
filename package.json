@@ -10,7 +10,7 @@
     "test-coverage": "nyc npm test",
     "migrate": " knex migrate:latest all --knexfile database/knexfile.js",
     "db-rollback": " knex migrate:rollback all --knexfile database/knexfile.js",
-    "seeder" : "knex seed:run --knexfile database/knexfile.js"
+    "seeder": "knex seed:run --knexfile database/knexfile.js"
   },
   "keywords": [
     "api",
@@ -24,12 +24,15 @@
   "author": "leonamquintao@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
     "knex": "^0.95.6",
+    "moment": "^2.29.1",
     "npm": "^7.17.0",
     "pg": "^8.6.0",
     "uuid": "^8.3.2"
