@@ -29,5 +29,5 @@ Classes that perform actions must not depends on implementations but must depend
 
 > knex migrate:make 'name-of-the-migration' --migrations-directory database/migrations
 
-> knex seed:make 'seed-name' database/seeds
+> knex seed:make 'seed-name' --knexfile database/knexfile.js
 
