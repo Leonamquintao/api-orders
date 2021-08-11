@@ -1,6 +1,6 @@
 const knex = require('../../../database/database');
 
-async function getUser(request, response) {
+async function getUser(request, response, next) {
   try {
     const id = request.params.id;
     const user = await knex('users').where('id', id).first();
@@ -9,7 +9,7 @@ async function getUser(request, response) {
       data: [user]
     });
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 }
 

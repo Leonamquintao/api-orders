@@ -1,5 +1,3 @@
-'use strict'
-
 const supertest = require('supertest');
 const expect = require('chai').expect;
 const server = require('../../../src/server');
@@ -13,18 +11,18 @@ describe('GET /users/:id', () => {
   before(() => {
     const app = server();
     request = supertest.agent(app);
-  })
+  });
 
   it('should return a 200', async () => {
     const response = await request.get(URL);
     expect(response.status).to.eql(200);
-  })
+  });
 
   it('should return an array with 1 object', async () => {
     const response = await request.get(URL);    
     expect(response.body.data).to.an('array');
     expect(response.body.data.length).to.eql(1);
-  })
+  });
 
   it('Expects to the object brought has id, name, email, birth date, document and created time', async () => {
 
@@ -48,5 +46,6 @@ describe('GET /users/:id', () => {
 
     expect(data).to.have.property('created_at')
       .to.be.a.a('string');
-  })
+  });
+
 })

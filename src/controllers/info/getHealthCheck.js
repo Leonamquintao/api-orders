@@ -1,5 +1,3 @@
-'use strict'
-
 function getHealthCheck(request, response) {
   return  response.status(200).send({
     status: 200,
@@ -7,4 +5,4 @@ function getHealthCheck(request, response) {
   })
 }
 
-module.exports = getHealthCheck
+module.exports = getHealthCheck;

@@ -1,10 +1,7 @@
 const assert = require('assert');
-require('dotenv').config({
-  path: '../.env'
-});
+const path = require('path');
 
-require('dotenv').config();
-
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
 const { DB_HOST, DB_NAME, DB_USER_NAME, DB_USER_PASSWORD, DB_PORT } = process.env;
 

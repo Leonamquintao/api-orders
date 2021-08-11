@@ -1,6 +1,6 @@
 const knex = require('../../../database/database');
 
-async function getUsers(request, response) {
+async function getUsers(request, response, next) {
   try {
     const users = await knex('users');
     return  response.status(200).send({
@@ -8,7 +8,7 @@ async function getUsers(request, response) {
       data: users
     });
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 }
 
