@@ -20,6 +20,6 @@ describe('GET /users', () => {
 
   it('should return an array with users limited to 10', async () => {
     const response = await request.get('/users');
-    expect(response.body.data.length).to.eql(10);
+    expect(response.body.data.length).to.be.within(0,10);
   })
 })

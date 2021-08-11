@@ -3,6 +3,9 @@ require('dotenv').config({
   path: '../.env'
 });
 
+require('dotenv').config();
+
+
 const { DB_HOST, DB_NAME, DB_USER_NAME, DB_USER_PASSWORD, DB_PORT } = process.env;
 
 assert(DB_HOST, 'DB_HOST is required use localhost if youre in local development!');
